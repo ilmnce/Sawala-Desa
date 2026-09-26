@@ -1,0 +1,46 @@
+{
+  "name": "salawa-desa",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "node tests/login.test.mjs && node tests/route-guard.test.mjs && node tests/metrics.test.mjs && node tests/pagination.test.mjs && node tests/a11y.test.mjs && node tests/aspirasi-form.test.mjs && node tests/aspirasi-api.test.mjs && node tests/dukungan-race.test.mjs && node tests/sinkron-status.test.mjs && node tests/dokumentasi.test.mjs && node tests/pembangunan-crud.test.mjs && node tests/milestone.test.mjs && node tests/anggaran-crud.test.mjs && node tests/pelayanan-surat.test.mjs && node tests/potensi.test.mjs",
+    "test:login": "node tests/login.test.mjs",
+    "test:guard": "node tests/route-guard.test.mjs",
+    "test:metrics": "node tests/metrics.test.mjs",
+    "test:pagination": "node tests/pagination.test.mjs",
+    "test:a11y": "node tests/a11y.test.mjs",
+    "test:aspirasi": "node tests/aspirasi-form.test.mjs",
+    "test:aspirasi-api": "node tests/aspirasi-api.test.mjs",
+    "test:dukungan": "node tests/dukungan-race.test.mjs",
+    "test:sinkron": "node tests/sinkron-status.test.mjs",
+    "test:doc": "node tests/dokumentasi.test.mjs",
+    "test:pembangunan": "node tests/pembangunan-crud.test.mjs",
+    "test:milestone": "node tests/milestone.test.mjs",
+    "test:anggaran-crud": "node tests/anggaran-crud.test.mjs",
+    "test:pelayanan": "node tests/pelayanan-surat.test.mjs",
+    "test:potensi": "node tests/potensi.test.mjs"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.45.4",
+    "lucide-react": "^0.468.0",
+    "next": "14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.2.35",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2"
+  }
+}
