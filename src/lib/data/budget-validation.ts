@@ -1,5 +1,5 @@
 /**
- * Salawa Desa - Operasi Kalkulasi Anggaran
+ * Sawala Desa - Operasi Kalkulasi Anggaran
  */
 
 import { createClient } from "../supabase/server";

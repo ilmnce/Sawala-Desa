@@ -84,7 +84,7 @@ export function AppShell({
           <Landmark className="h-5 w-5" aria-hidden="true" />
         </span>
         <span>
-          <span className="block text-sm font-extrabold tracking-[-0.02em] text-village-900">SALAWA DESA</span>
+          <span className="block text-sm font-extrabold tracking-[-0.02em] text-village-900">SAWALA DESA</span>
           <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-slate-500">
             {variant === "admin" ? "Panel Admin" : "Portal Warga"}
           </span>
@@ -193,7 +193,7 @@ export function AppShell({
           >
             <Menu className="h-5 w-5" aria-hidden="true" />
           </button>
-          <span className="font-extrabold tracking-[-0.02em] text-village-900">SALAWA DESA</span>
+          <span className="font-extrabold tracking-[-0.02em] text-village-900">SAWALA DESA</span>
         </header>
 
         <main

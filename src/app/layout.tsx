@@ -16,7 +16,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "SALAWA DESA",
+  title: "SAWALA DESA",
   description: "Pelayanan dan informasi desa dalam satu ruang digital.",
 };
 

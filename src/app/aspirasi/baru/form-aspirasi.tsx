@@ -124,7 +124,7 @@ export function FormAspirasi() {
           onChange={(e) => setJudul(e.target.value)}
           onBlur={() => setTouched((t) => ({ ...t, judul: true }))}
           maxLength={JUDUL_MAX}
-          placeholder="Contoh: Perbaikan jalan usaha tani Dusun Salawa"
+          placeholder="Contoh: Perbaikan jalan usaha tani Dusun Sawala"
           aria-invalid={Boolean(errorFor("judul"))}
           aria-describedby={errorFor("judul") ? "judul-error" : "judul-hint"}
           className={inputClass}

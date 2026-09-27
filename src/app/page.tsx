@@ -32,7 +32,7 @@ export default async function BerandaPage() {
               <Landmark className="h-5 w-5" aria-hidden="true" />
             </span>
             <span>
-              <span className="block text-sm font-extrabold tracking-[-0.02em] text-village-900">SALAWA DESA</span>
+              <span className="block text-sm font-extrabold tracking-[-0.02em] text-village-900">SAWALA DESA</span>
               <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-slate-500">
                 Portal Informasi Desa
               </span>
@@ -54,10 +54,10 @@ export default async function BerandaPage() {
         <section className="rounded-3xl border border-village-100 bg-gradient-to-br from-village-600 to-village-800 px-6 py-10 text-white sm:px-10 sm:py-14">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium backdrop-blur">
             <Landmark className="h-4 w-4" aria-hidden="true" />
-            Pemerintah Desa Salawa
+            Pemerintah Desa Sawala
           </p>
           <h1 className="mt-6 max-w-3xl font-[var(--font-lora)] text-4xl font-semibold leading-[1.1] tracking-[-0.035em] sm:text-5xl">
-            Satu pintu informasi & layanan Desa Salawa
+            Satu pintu informasi & layanan Desa Sawala
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-village-50/90 sm:text-lg">
             Pantau pembangunan, baca pengumuman terbaru, dan akses layanan administrasi desa
@@ -117,7 +117,7 @@ export default async function BerandaPage() {
 
       <footer className="border-t border-slate-200 bg-white">
         <div className="mx-auto max-w-6xl px-5 py-8 text-sm text-slate-500 sm:px-8">
-          © {tahun} Pemerintah Desa Salawa. Seluruh informasi dikelola perangkat desa.
+          © {tahun} Pemerintah Desa Sawala. Seluruh informasi dikelola perangkat desa.
         </div>
       </footer>
     </div>

@@ -1,5 +1,5 @@
 -- =============================================================================
--- SALAWA DESA - Migration 0003 : Entitas inti (aspirasi, pembangunan, anggaran)
+-- SAWALA DESA - Migration 0003 : Entitas inti (aspirasi, pembangunan, anggaran)
 -- =============================================================================
 -- Tabel-tabel ini menjadi sumber agregasi statistik desa dan dipakai lintas
 -- modul (aspirasi, pembangunan, transparansi).

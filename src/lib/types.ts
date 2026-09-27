@@ -1,4 +1,4 @@
-/** Tipe domain bersama untuk SALAWA DESA. */
+/** Tipe domain bersama untuk SAWALA DESA. */
 
 export type UserRole = "warga" | "admin";
 

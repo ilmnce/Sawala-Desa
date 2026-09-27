@@ -132,7 +132,7 @@ export function DataDiriForm({ user }: { user: AppUser }) {
           name="alamat"
           rows={3}
           defaultValue={user.alamat ?? ""}
-          placeholder="Contoh: Jl. Poros Desa, Dusun Salawa"
+          placeholder="Contoh: Jl. Poros Desa, Dusun Sawala"
           aria-invalid={Boolean(state.fieldErrors?.alamat)}
           className={inputClass}
         />
@@ -152,7 +152,7 @@ export function DataDiriForm({ user }: { user: AppUser }) {
         </div>
         <div>
           <label htmlFor="dusun" className="mb-1.5 block text-sm font-semibold text-slate-700">Dusun</label>
-          <input id="dusun" name="dusun" defaultValue={user.dusun ?? ""} placeholder="Salawa" className={inputClass} />
+          <input id="dusun" name="dusun" defaultValue={user.dusun ?? ""} placeholder="Sawala" className={inputClass} />
         </div>
       </div>
 

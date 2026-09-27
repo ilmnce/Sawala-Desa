@@ -1,5 +1,5 @@
 -- =============================================================================
--- SALAWA DESA - Migration 0001 : Tabel users (warga & admin)
+-- SAWALA DESA - Migration 0001 : Tabel users (warga & admin)
 -- =============================================================================
 -- Konteks keamanan:
 --   * Kredensial (password) TIDAK disimpan di public.users. Password dikelola
@@ -7,7 +7,7 @@
 --     pernah tersimpan sebagai plaintext.
 --   * `public.users` adalah tabel profil kependudukan yang menyimpan NIK 16
 --     digit, identitas warga, dan role. Auth NIK dipetakan ke akun auth melalui
---     email sintetis deterministik "<nik>@warga.salawadesa.local" (dibuat di
+--     email sintetis deterministik "<nik>@warga.sawaladesa.local" (dibuat di
 --     layer aplikasi), sehingga NIK tetap menjadi identitas login warga.
 --   * Baris profil otomatis dibuat saat akun auth baru terdaftar (trigger),
 --     memakai NIK dari metadata pendaftaran.
@@ -58,7 +58,7 @@ create table if not exists public.users (
   constraint users_nik_format check (nik ~ '^[0-9]{16}$')
 );
 
-comment on table public.users is 'Profil warga & admin Salawa Desa. Kredensial dikelola Supabase Auth (auth.users), bukan di sini.';
+comment on table public.users is 'Profil warga & admin Sawala Desa. Kredensial dikelola Supabase Auth (auth.users), bukan di sini.';
 comment on column public.users.nik is 'Nomor Induk Kependudukan, 16 digit angka, unik per warga.';
 
 -- Satu NIK hanya boleh dimiliki satu akun (case-insensitive via lower()).
@@ -141,7 +141,7 @@ begin
   values (
     new.id,
     v_nik,
-    coalesce(v_nama, 'Warga Salawa'),
+    coalesce(v_nama, 'Warga Sawala'),
     case when v_role = 'admin' then 'admin' else 'warga' end
   )
   on conflict (id) do nothing;

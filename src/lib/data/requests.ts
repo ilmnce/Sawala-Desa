@@ -75,7 +75,7 @@ export async function getServiceRequests(options: {
         id: String(row.id),
         nomorRegistrasi: (row.nomor_registrasi as string | null) ?? null,
         pemohonId: String(row.pemohon_id),
-        pemohonNama: pemohon?.nama ?? "Warga Salawa",
+        pemohonNama: pemohon?.nama ?? "Warga Sawala",
         pemohonNik: pemohon?.nik ?? "-",
         letterTypeId: row.letter_type_id ? String(row.letter_type_id) : null,
         jenisSurat: String(row.jenis_surat ?? ""),

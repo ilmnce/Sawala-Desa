@@ -1,5 +1,5 @@
 -- =============================================================================
--- SALAWA DESA - Migration 0002 : Pengumuman & agenda desa
+-- SAWALA DESA - Migration 0002 : Pengumuman & agenda desa
 -- =============================================================================
 -- Pengumuman dikelola admin dan ditampilkan kronologis di beranda publik.
 -- =============================================================================

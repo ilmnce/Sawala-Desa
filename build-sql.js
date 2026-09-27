@@ -4,7 +4,7 @@ const path = require("path");
 const sqlDir = path.join(__dirname, "supabase", "migrations");
 const files = fs.readdirSync(sqlDir).filter(f => f.endsWith(".sql")).sort();
 
-let out = "-- SALAWA DESA: COMBINED SETUP\n\n";
+let out = "-- SAWALA DESA: COMBINED SETUP\n\n";
 for (const f of files) {
   out += `-- >>> ${f} <<<\n`;
   out += fs.readFileSync(path.join(sqlDir, f), "utf8");

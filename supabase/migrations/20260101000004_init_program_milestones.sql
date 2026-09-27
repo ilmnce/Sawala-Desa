@@ -1,5 +1,5 @@
 -- =============================================================================
--- SALAWA DESA - Migration 0005 : Log milestone pembangunan
+-- SAWALA DESA - Migration 0005 : Log milestone pembangunan
 -- =============================================================================
 -- Setiap perubahan progress/status program dicatat sebagai milestone sehingga
 -- warga dapat melihat riwayat perkembangan pekerjaan (timeline).

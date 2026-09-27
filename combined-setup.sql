@@ -1,8 +1,8 @@
--- SALAWA DESA: COMBINED SETUP
+-- SAWALA DESA: COMBINED SETUP
 
 -- >>> 20260101000000_init_users.sql <<<
 -- =============================================================================
--- SALAWA DESA - Migration 0001 : Tabel users (warga & admin)
+-- SAWALA DESA - Migration 0001 : Tabel users (warga & admin)
 -- =============================================================================
 -- Konteks keamanan:
 --   * Kredensial (password) TIDAK disimpan di public.users. Password dikelola
@@ -10,7 +10,7 @@
 --     pernah tersimpan sebagai plaintext.
 --   * `public.users` adalah tabel profil kependudukan yang menyimpan NIK 16
 --     digit, identitas warga, dan role. Auth NIK dipetakan ke akun auth melalui
---     email sintetis deterministik "<nik>@warga.salawadesa.local" (dibuat di
+--     email sintetis deterministik "<nik>@warga.sawaladesa.local" (dibuat di
 --     layer aplikasi), sehingga NIK tetap menjadi identitas login warga.
 --   * Baris profil otomatis dibuat saat akun auth baru terdaftar (trigger),
 --     memakai NIK dari metadata pendaftaran.
@@ -61,7 +61,7 @@ create table if not exists public.users (
   constraint users_nik_format check (nik ~ '^[0-9]{16}$')
 );
 
-comment on table public.users is 'Profil warga & admin Salawa Desa. Kredensial dikelola Supabase Auth (auth.users), bukan di sini.';
+comment on table public.users is 'Profil warga & admin Sawala Desa. Kredensial dikelola Supabase Auth (auth.users), bukan di sini.';
 comment on column public.users.nik is 'Nomor Induk Kependudukan, 16 digit angka, unik per warga.';
 
 -- Satu NIK hanya boleh dimiliki satu akun (case-insensitive via lower()).
@@ -144,7 +144,7 @@ begin
   values (
     new.id,
     v_nik,
-    coalesce(v_nama, 'Warga Salawa'),
+    coalesce(v_nama, 'Warga Sawala'),
     case when v_role = 'admin' then 'admin' else 'warga' end
   )
   on conflict (id) do nothing;
@@ -206,7 +206,7 @@ create policy "users_admin_update_all"
 
 -- >>> 20260101000001_init_announcements.sql <<<
 -- =============================================================================
--- SALAWA DESA - Migration 0002 : Pengumuman & agenda desa
+-- SAWALA DESA - Migration 0002 : Pengumuman & agenda desa
 -- =============================================================================
 -- Pengumuman dikelola admin dan ditampilkan kronologis di beranda publik.
 -- =============================================================================
@@ -276,7 +276,7 @@ create policy "announcements_admin_delete"
 
 -- >>> 20260101000002_init_core_modules.sql <<<
 -- =============================================================================
--- SALAWA DESA - Migration 0003 : Entitas inti (aspirasi, pembangunan, anggaran)
+-- SAWALA DESA - Migration 0003 : Entitas inti (aspirasi, pembangunan, anggaran)
 -- =============================================================================
 -- Tabel-tabel ini menjadi sumber agregasi statistik desa dan dipakai lintas
 -- modul (aspirasi, pembangunan, transparansi).
@@ -567,7 +567,7 @@ create policy "budgets_admin_delete"
 
 -- >>> 20260101000003_init_service_requests.sql <<<
 -- =============================================================================
--- SALAWA DESA - Migration 0004 : Pengajuan surat & potensi desa
+-- SAWALA DESA - Migration 0004 : Pengajuan surat & potensi desa
 -- =============================================================================
 -- Pengajuan surat (pelayanan administrasi) dan direktori potensi desa.
 -- =============================================================================
@@ -753,7 +753,7 @@ create policy "potentials_admin_delete"
 
 -- >>> 20260101000004_init_program_milestones.sql <<<
 -- =============================================================================
--- SALAWA DESA - Migration 0005 : Log milestone pembangunan
+-- SAWALA DESA - Migration 0005 : Log milestone pembangunan
 -- =============================================================================
 -- Setiap perubahan progress/status program dicatat sebagai milestone sehingga
 -- warga dapat melihat riwayat perkembangan pekerjaan (timeline).

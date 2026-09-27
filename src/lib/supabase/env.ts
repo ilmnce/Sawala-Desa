@@ -11,7 +11,7 @@ export const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 export const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
 
 /** Domain email sintetis untuk memetakan NIK 16 digit ke akun Supabase Auth. */
-export const NIK_EMAIL_DOMAIN = "warga.salawadesa.local";
+export const NIK_EMAIL_DOMAIN = "warga.sawaladesa.local";
 
 export function isSupabaseConfigured(): boolean {
   return SUPABASE_URL.trim().length > 0 && SUPABASE_ANON_KEY.trim().length > 0;

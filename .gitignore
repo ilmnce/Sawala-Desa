@@ -15,7 +15,7 @@
 
 # local configuration
 .env*
-AKUN-DEMO-SALAWA.txt
+AKUN-DEMO-SAWALA.txt
 !.env.example
 
 # misc

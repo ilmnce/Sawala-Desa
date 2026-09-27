@@ -184,7 +184,7 @@ export function FormTambahProgram({
             id="lokasi"
             value={lokasi}
             onChange={(e) => setLokasi(e.target.value)}
-            placeholder="Dusun Salawa / Terpusat"
+            placeholder="Dusun Sawala / Terpusat"
             className={inputClass}
           />
         </div>

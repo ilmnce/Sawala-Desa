@@ -118,7 +118,7 @@ export default function LoginPage() {
             </p>
           </div>
 
-          <p className="text-sm text-slate-500">© 2026 Pemerintah Desa Salawa</p>
+          <p className="text-sm text-slate-500">© 2026 Pemerintah Desa Sawala</p>
         </section>
 
         <section className="flex min-h-screen items-center justify-center px-5 py-8 sm:px-8 lg:bg-white/45 lg:px-12 lg:backdrop-blur-sm">
@@ -221,7 +221,7 @@ export default function LoginPage() {
                     </>
                   ) : (
                     <>
-                      Masuk ke SALAWA DESA
+                      Masuk ke SAWALA DESA
                       <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
                     </>
                   )}
@@ -251,7 +251,7 @@ function Brand() {
         <Landmark className="h-6 w-6" aria-hidden="true" />
       </span>
       <span>
-        <span className="block text-lg font-extrabold leading-5 tracking-[-0.02em] text-village-900">SALAWA DESA</span>
+        <span className="block text-lg font-extrabold leading-5 tracking-[-0.02em] text-village-900">SAWALA DESA</span>
         <span className="text-xs font-medium uppercase tracking-[0.12em] text-slate-500">Melayani sepenuh hati</span>
       </span>
     </div>

@@ -70,7 +70,7 @@ export async function getAspirations(options: {
         prioritas: row.prioritas === true,
         catatanAdmin: (row.catatan_admin as string | null) ?? null,
         pengusulId: String(row.pengusul_id),
-        pengusulNama: namaById.get(String(row.pengusul_id)) ?? "Warga Salawa",
+        pengusulNama: namaById.get(String(row.pengusul_id)) ?? "Warga Sawala",
         dukungan: supports.length,
         didukung: options.userId ? supports.some((s) => String(s.user_id) === options.userId) : false,
         createdAt: String(row.created_at ?? ""),

@@ -52,7 +52,7 @@ async function waitForServer(timeoutMs = 60000) {
 
 /** Uji logika validasi langsung dengan mengompilasi modul TS-nya. */
 function runValidationUnitTests() {
-  const dir = mkdtempSync(join(tmpdir(), "salawa-val-"));
+  const dir = mkdtempSync(join(tmpdir(), "sawala-val-"));
   try {
     const compiled = spawnSync(
       "npx tsc src/lib/aspiration-validation.ts src/lib/aspiration-constants.ts " +

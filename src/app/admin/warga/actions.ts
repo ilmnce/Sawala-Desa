@@ -46,7 +46,7 @@ export async function tambahWargaAction(
     { auth: { autoRefreshToken: false, persistSession: false } }
   );
 
-  const syntheticEmail = `${nik}@warga.salawadesa.local`;
+  const syntheticEmail = `${nik}@warga.sawaladesa.local`;
 
   // Pembuatan Auth Users ini akan men-trigger handle_new_user yang kita buat di Migration 1
   const { data, error } = await adminAuthClient.auth.admin.createUser({

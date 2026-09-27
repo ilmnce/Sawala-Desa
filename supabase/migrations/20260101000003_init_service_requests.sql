@@ -1,5 +1,5 @@
 -- =============================================================================
--- SALAWA DESA - Migration 0004 : Pengajuan surat & potensi desa
+-- SAWALA DESA - Migration 0004 : Pengajuan surat & potensi desa
 -- =============================================================================
 -- Pengajuan surat (pelayanan administrasi) dan direktori potensi desa.
 -- =============================================================================
