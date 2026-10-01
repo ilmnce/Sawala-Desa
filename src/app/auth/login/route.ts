@@ -49,10 +49,24 @@ export async function POST(request: Request) {
   }
 
   const supabase = createClient();
-  const { data, error } = await supabase.auth.signInWithPassword({
+  let authResult = await supabase.auth.signInWithPassword({
     email: nikToEmail(nik),
     password,
   });
+
+  // Fallback untuk akun yang terdaftar dengan domain legacy (@warga.salawadesa.local)
+  if ((authResult.error || !authResult.data.user) && !nikToEmail(nik).endsWith("salawadesa.local")) {
+    const legacyEmail = `${nik}@warga.salawadesa.local`;
+    const fallback = await supabase.auth.signInWithPassword({
+      email: legacyEmail,
+      password,
+    });
+    if (!fallback.error && fallback.data.user) {
+      authResult = fallback;
+    }
+  }
+
+  const { data, error } = authResult;
 
   if (error || !data.user) {
     // Pesan generik demi keamanan: jangan bedakan NIK salah vs password salah.
