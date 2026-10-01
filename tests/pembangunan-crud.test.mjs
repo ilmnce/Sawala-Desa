@@ -93,9 +93,10 @@ try {
   // --- 3. Verifikasi otorisasi membedakan warga & admin sebelum db ---
   {
     const src = readFileSync("./src/app/api/pembangunan/route.ts", "utf8");
+    const postBody = src.slice(src.indexOf("export async function POST"));
     check(
       "endpoint POST memblokir role != admin sebelum ke database",
-      src.includes('user.role !== "admin"') && src.indexOf('user.role !== "admin"') < src.indexOf("supabase"),
+      postBody.includes('user.role !== "admin"') && postBody.indexOf('user.role !== "admin"') < postBody.indexOf("createClient"),
       "guard sequence",
     );
   }

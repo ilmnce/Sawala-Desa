@@ -134,7 +134,7 @@ try {
     check("field password hilang ditangani (400)", r.status === 400, `status=${r.status}`);
   }
 
-  // 6. NIK + password valid, tanpa konfigurasi DB -> 503 (pesan, bukan crash).
+  // 6. NIK + password valid, tanpa konfigurasi DB -> 503, atau 401 jika DB terkonfigurasi namun NIK tidak terdaftar.
   {
     const r = await request("/auth/login", {
       method: "POST",
@@ -142,8 +142,8 @@ try {
       body: JSON.stringify({ nik: "1234567890123456", password: "rahasia123" }),
     });
     check(
-      "kredensial valid tanpa DB -> 503 terkendali",
-      r.status === 503,
+      "kredensial valid (tanpa DB -> 503 / tidak terdaftar -> 401)",
+      r.status === 503 || r.status === 401,
       `status=${r.status}`,
     );
   }

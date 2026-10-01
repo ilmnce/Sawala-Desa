@@ -4,13 +4,17 @@ import { getRoleFromRequest } from "@/lib/supabase/role";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import { homePathForRole } from "@/lib/routes";
 
-const PUBLIC_PATHS = ["/login", "/lupa-password"];
+const AUTH_ENTRY_PATHS = ["/login", "/lupa-password"];
 /** Endpoint auth harus selalu dilewatkan (login/logout/callback tidak boleh dialihkan). */
 const AUTH_ENDPOINT_PREFIX = "/auth/";
 const ADMIN_PREFIX = "/admin";
 
 function isPublic(pathname: string) {
-  return PUBLIC_PATHS.some((path) => pathname === path);
+  if (pathname === "/" || AUTH_ENTRY_PATHS.includes(pathname)) return true;
+  if (pathname === "/potensi" || pathname.startsWith("/potensi/")) return true;
+  if (pathname === "/pembangunan" || pathname.startsWith("/pembangunan/")) return true;
+  if (pathname === "/transparansi" || pathname.startsWith("/transparansi/")) return true;
+  return false;
 }
 
 /** Endpoint API & auth: jangan pernah dialihkan oleh aturan halaman. */
@@ -81,8 +85,8 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  // Pengguna sudah login tidak perlu melihat halaman login.
-  if (isPublic(pathname) || pathname === "/") {
+  // Pengguna sudah login tidak perlu melihat halaman login / landing page.
+  if (AUTH_ENTRY_PATHS.includes(pathname) || pathname === "/") {
     const url = request.nextUrl.clone();
     url.pathname = home;
     url.search = "";
