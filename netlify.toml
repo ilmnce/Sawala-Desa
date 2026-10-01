@@ -1,0 +1,22 @@
+# SAWALA DESA - konfigurasi Netlify untuk Next.js 14 + Supabase SSR
+# Aplikasi memakai server-side rendering & route handler (/api/*), sehingga
+# di-deploy sebagai serverless (bukan static export) via plugin Netlify Next.js.
+
+[build]
+  # Jalankan build Next.js; plugin @netlify/plugin-nextjs menangani publish,
+  # asset, serta function serverless otomatis (jangan menuliskan `publish`
+  # manual saat memakai plugin — plugin yang menghitungnya).
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[build.plugins]
+  package = "@netlify/plugin-nextjs"
+
+# Variabel yang wajib diisi lewat dashboard Netlify (Site settings > Environment
+# variables), lalu build ulang. Jangan menuliskan nilainya di sini agar tidak
+# terekam di repo.
+#   - NEXT_PUBLIC_SUPABASE_URL            (dibaca saat build untuk SSR + client)
+#   - NEXT_PUBLIC_SUPABASE_ANON_KEY       (public, dipakai client & anon reads)
+#   - SUPABASE_SERVICE_ROLE_KEY           (server-only; untuk alur admin)
