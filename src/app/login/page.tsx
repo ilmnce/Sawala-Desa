@@ -114,11 +114,11 @@ export default function LoginPage() {
               <span className="block text-village-600">layanan lebih dekat.</span>
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-8 text-slate-600">
-              Ajukan layanan, sampaikan aspirasi, dan pantau pembangunan desa di wilayah Kota Serang melalui satu ruang digital yang aman dan transparan.
+              Ajukan layanan, sampaikan aspirasi, dan pantau pembangunan desa di wilayah Kabupaten Pandeglang melalui satu ruang digital yang aman dan transparan.
             </p>
           </div>
 
-          <p className="text-sm text-slate-500">© 2026 Program Sawala Desa — Kota Serang</p>
+          <p className="text-sm text-slate-500">© 2026 Program Sawala Desa — Kabupaten Pandeglang</p>
         </section>
 
         <section className="flex min-h-screen items-center justify-center px-5 py-8 sm:px-8 lg:bg-white/45 lg:px-12 lg:backdrop-blur-sm">

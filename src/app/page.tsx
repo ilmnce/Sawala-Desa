@@ -52,7 +52,7 @@ export default async function BerandaPage() {
                 SAWALA DESA
               </span>
               <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-slate-500">
-                Aspirasi Masyarakat Kota Serang
+                Aspirasi Masyarakat Kabupaten Pandeglang
               </span>
             </span>
           </Link>
@@ -121,15 +121,15 @@ export default async function BerandaPage() {
                 <Globe2 className="h-3.5 w-3.5 text-emerald-300" aria-hidden="true" />
                 <span>Program Aspirasi Masyarakat</span>
                 <span className="text-white/40">•</span>
-                <span className="text-emerald-200">Seluruh Kota Serang</span>
+                <span className="text-emerald-200">Seluruh Kabupaten Pandeglang</span>
               </div>
 
               <h1 className="mt-5 font-[var(--font-lora)] text-3xl font-bold leading-[1.15] tracking-[-0.03em] sm:text-4xl lg:text-5xl text-white">
-                Satu pintu aspirasi & layanan masyarakat Kota Serang
+                Satu pintu aspirasi & layanan masyarakat Kabupaten Pandeglang
               </h1>
 
               <p className="mt-4 max-w-xl text-base leading-relaxed text-village-100/90 sm:text-lg">
-                Sawala Desa adalah program terpadu untuk masyarakat di seluruh wilayah Kota Serang
+                Sawala Desa adalah program terpadu untuk masyarakat di seluruh wilayah Kabupaten Pandeglang
                 guna mempermudah penyampaian aspirasi, pemantauan program pembangunan, dan koordinasi
                 langsung ke perangkat desa & kelurahan.
               </p>
@@ -153,7 +153,7 @@ export default async function BerandaPage() {
               </div>
             </div>
 
-            {/* Kolom Kanan: Card Jangkauan & Manfaat Program Kota Serang */}
+            {/* Kolom Kanan: Card Jangkauan & Manfaat Program Kabupaten Pandeglang */}
             <div className="lg:col-span-5">
               <div className="rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-md">
                 <div className="flex items-center justify-between border-b border-white/10 pb-4">
@@ -162,7 +162,7 @@ export default async function BerandaPage() {
                     <span className="text-sm font-semibold text-white">Jangkauan Program</span>
                   </div>
                   <span className="rounded-md bg-emerald-500/20 px-2.5 py-0.5 text-[11px] font-medium text-emerald-300">
-                    Kota Serang
+                    Kab. Pandeglang
                   </span>
                 </div>
 
@@ -170,8 +170,8 @@ export default async function BerandaPage() {
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-300 mt-0.5" aria-hidden="true" />
                     <div>
-                      <p className="font-semibold text-white">Mencakup Seluruh Wilayah Kota Serang</p>
-                      <p className="text-village-200">Terbuka bagi warga di seluruh desa & kelurahan se-Kota Serang.</p>
+                      <p className="font-semibold text-white">Mencakup Seluruh Wilayah Kabupaten Pandeglang</p>
+                      <p className="text-village-200">Terbuka bagi warga di seluruh desa & kelurahan se-Kabupaten Pandeglang.</p>
                     </div>
                   </div>
 
@@ -279,7 +279,7 @@ export default async function BerandaPage() {
               Layanan & Informasi Unggulan
             </h2>
             <p className="mt-1 text-sm text-slate-600">
-              Kemudahan penyaluran aspirasi masyarakat dan akses administrasi desa terpadu se-Kota Serang.
+              Kemudahan penyaluran aspirasi masyarakat dan akses administrasi desa terpadu se-Kabupaten Pandeglang.
             </p>
           </div>
           <ServiceShortcuts />
@@ -317,7 +317,7 @@ export default async function BerandaPage() {
               </div>
               <p className="text-xs leading-relaxed text-slate-600">
                 Program digitalisasi aspirasi masyarakat mencakup seluruh pemerintahan desa dan kelurahan
-                di wilayah Kota Serang. Menghubungkan warga dan perangkat desa secara transparan dan akuntabel.
+                di wilayah Kabupaten Pandeglang. Menghubungkan warga dan perangkat desa secara transparan dan akuntabel.
               </p>
             </div>
 
@@ -374,7 +374,7 @@ export default async function BerandaPage() {
               </ul>
             </div>
 
-            {/* Jangkauan Pemerintahan Kota Serang */}
+            {/* Jangkauan Pemerintahan Kabupaten Pandeglang */}
             <div>
               <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900">
                 Wilayah Program
@@ -382,7 +382,7 @@ export default async function BerandaPage() {
               <div className="mt-3 space-y-2 text-xs text-slate-600">
                 <p className="flex items-start gap-2">
                   <Globe2 className="h-3.5 w-3.5 shrink-0 text-slate-400 mt-0.5" aria-hidden="true" />
-                  <span>Seluruh Desa & Kelurahan di Wilayah Kota Serang</span>
+                  <span>Seluruh Desa & Kelurahan di Wilayah Kabupaten Pandeglang</span>
                 </p>
                 <p className="flex items-center gap-2">
                   <Network className="h-3.5 w-3.5 shrink-0 text-slate-400" aria-hidden="true" />
@@ -397,7 +397,7 @@ export default async function BerandaPage() {
           </div>
 
           <div className="mt-10 border-t border-slate-200/80 pt-6 text-center text-xs text-slate-500">
-            © {tahun} Program Sawala Desa — Keterbukaan Aspirasi Masyarakat Kota Serang.
+            © {tahun} Program Sawala Desa — Keterbukaan Aspirasi Masyarakat Kabupaten Pandeglang.
           </div>
         </div>
       </footer>
