@@ -80,9 +80,7 @@ export function AppShell({
   const SidebarContent = (
     <div className="flex h-full flex-col">
       <Link href={homeHref} className="flex items-center gap-3 px-5 py-5" onClick={() => setOpen(false)}>
-        <span className="grid h-10 w-10 place-items-center rounded-xl bg-village-600 text-white">
-          <Landmark className="h-5 w-5" aria-hidden="true" />
-        </span>
+        <img src="/logo-sawala.svg" alt="Logo Sawala Desa" className="h-10 w-10 drop-shadow-sm" />
         <span>
           <span className="block text-sm font-extrabold tracking-[-0.02em] text-village-900">SAWALA DESA</span>
           <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-slate-500">

@@ -44,9 +44,7 @@ export default async function BerandaPage() {
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
           <Link href="/" className="group flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-village-700 text-white shadow-sm transition group-hover:bg-village-800">
-              <Landmark className="h-5 w-5" aria-hidden="true" />
-            </span>
+            <img src="/logo-sawala.svg" alt="Logo Sawala Desa" className="h-10 w-10 drop-shadow-sm transition-transform group-hover:scale-105" />
             <span>
               <span className="block text-sm font-extrabold tracking-[-0.02em] text-village-900">
                 SAWALA DESA
@@ -308,9 +306,7 @@ export default async function BerandaPage() {
             {/* Identitas Program */}
             <div className="space-y-3">
               <div className="flex items-center gap-2.5">
-                <span className="grid h-9 w-9 place-items-center rounded-xl bg-village-700 text-white">
-                  <Landmark className="h-4 w-4" aria-hidden="true" />
-                </span>
+                <img src="/logo-sawala.svg" alt="Logo Sawala Desa" className="h-9 w-9 drop-shadow-sm" />
                 <span className="text-base font-extrabold tracking-tight text-village-900">
                   SAWALA DESA
                 </span>

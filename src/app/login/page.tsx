@@ -247,9 +247,7 @@ export default function LoginPage() {
 function Brand() {
   return (
     <div className="flex items-center gap-3">
-      <span className="grid h-11 w-11 place-items-center rounded-xl bg-village-600 text-white shadow-lg shadow-village-600/20">
-        <Landmark className="h-6 w-6" aria-hidden="true" />
-      </span>
+      <img src="/logo-sawala.svg" alt="Logo Sawala Desa" className="h-11 w-11 drop-shadow-md" />
       <span>
         <span className="block text-lg font-extrabold leading-5 tracking-[-0.02em] text-village-900">SAWALA DESA</span>
         <span className="text-xs font-medium uppercase tracking-[0.12em] text-slate-500">Melayani sepenuh hati</span>
