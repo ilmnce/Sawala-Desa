@@ -18,6 +18,10 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: "SAWALA DESA",
   description: "Pelayanan dan informasi desa dalam satu ruang digital.",
+  icons: {
+    icon: "/logo-sawala.svg",
+    apple: "/logo-sawala.svg",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
