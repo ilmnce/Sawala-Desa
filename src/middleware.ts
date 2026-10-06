@@ -11,6 +11,7 @@ const ADMIN_PREFIX = "/admin";
 
 function isPublic(pathname: string) {
   if (pathname === "/" || AUTH_ENTRY_PATHS.includes(pathname)) return true;
+  if (pathname === "/register") return true;
   if (pathname === "/potensi" || pathname.startsWith("/potensi/")) return true;
   if (pathname === "/pembangunan" || pathname.startsWith("/pembangunan/")) return true;
   if (pathname === "/transparansi" || pathname.startsWith("/transparansi/")) return true;
