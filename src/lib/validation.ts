@@ -8,6 +8,36 @@ export interface FieldErrors {
   [field: string]: string | undefined;
 }
 
+/** Panjang minimal password yang berlaku untuk daftar, ganti, dan password awal admin. */
+export const MIN_PASSWORD_LENGTH = 8;
+
+/** Password harus memenuhi panjang minimal, memuat huruf, dan memuat angka. */
+export function isValidPassword(password: string): boolean {
+  return (
+    password.length >= MIN_PASSWORD_LENGTH &&
+    /[A-Za-z]/.test(password) &&
+    /[0-9]/.test(password)
+  );
+}
+
+/**
+ * Pesan error untuk satu field password. Dipakai bersama oleh registrasi warga,
+ * ganti password, dan pembuatan akun oleh admin agar aturan tidak menyimpang.
+ */
+export function passwordRuleError(
+  password: string,
+  label = "Password",
+): string | undefined {
+  if (password.length === 0) return `${label} wajib diisi.`;
+  if (password.length < MIN_PASSWORD_LENGTH) {
+    return `${label} minimal ${MIN_PASSWORD_LENGTH} karakter.`;
+  }
+  if (!/[A-Za-z]/.test(password) || !/[0-9]/.test(password)) {
+    return `${label} harus memuat huruf dan angka.`;
+  }
+  return undefined;
+}
+
 export function required(value: string, label: string): string | undefined {
   return value.trim().length === 0 ? `${label} wajib diisi.` : undefined;
 }
